@@ -1,0 +1,159 @@
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+
+    background: rgba(4, 69, 112, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* ========================= */
+/* NAVBAR LOGO */
+/* ========================= */
+
+.text-logo {
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #00bcd4;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Subtle underline glow */
+.text-logo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #00bcd4;
+    box-shadow: 0 0 10px rgba(0,188,212,0.8);
+    transition: width 0.3s ease;
+}
+
+.text-logo:hover::after {
+    width: 100%;
+}
+
+
+/* ========================= */
+/* NAV LINKS */
+/* ========================= */
+
+.nav-links a {
+    position: relative;
+    margin-left: 30px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0%;
+    height: 2px;
+    background: #00bcd4;
+    box-shadow: 0 0 12px rgba(0,188,212,0.8);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Active page */
+.active-link {
+    color: #ffffff;
+}
+
+.active-link::after {
+    width: 100%;
+}
+
+
+/* ========================= */
+/* MENU BUTTON */
+/* ========================= */
+
+.menu-btn {
+    display: none;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.menu-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* ========================= */
+/* SIDE MENU */
+/* ========================= */
+
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1500;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 1.8rem;
+        padding: 10px;
+    }
+}
+

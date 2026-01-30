@@ -1,0 +1,308 @@
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    position: relative;
+    background: url('../Media/PortfolioBackground1.png') center/cover no-repeat fixed;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+}
+
+#heroCanvas {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* TEXT */
+.hero-content {
+    z-index: 2;
+    max-width: 50%;
+}
+
+.hero-name {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.typing-line {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 520px;
+    margin: 15px 0 35px;
+    line-height: 1.7;
+    color: #cbeeff;
+}
+
+/* Name underline glow */
+.name-glow {
+    position: relative;
+}
+
+.name-glow::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #00bcd4;
+    box-shadow: 0 0 12px rgba(0,188,212,0.8);
+}
+
+/* Cursor blink */
+.cursor {
+    margin-left: 4px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* ========================= */
+/* HERO BUTTON ICON ANIMATION */
+/* ========================= */
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 30px;
+    background: #00bcd4;
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.hero-btn.secondary {
+    background: transparent;
+    border: 2px solid #00bcd4;
+}
+
+/* Icon hidden by default */
+.btn-icon {
+    opacity: 0;
+    transform: translateX(-12px);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.hero-btn:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,188,212,0.6);
+}
+
+/* Icon slides IN from right on hover */
+.hero-btn:hover .btn-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hero-photo img {
+    width: 350px;
+    border-radius: 70px;
+    filter: grayscale(100%);
+    transition: all 0.6s ease;
+    border: 8px solid #044570;
+}
+
+.hero-photo img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* HERO PHOTO WOW EFFECT */
+/* ========================= */
+
+.hero-photo {
+    position: relative;
+    z-index: 2;
+    transform: translateX(-200px); /* ← MOVE LEFT HERE */ 
+}
+
+.hero-photo-float {
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Glow ring behind image */
+.hero-photo::before {
+    content: "";
+    position: absolute;
+    inset: -18px;
+    border-radius: 80px;
+    background: radial-gradient(
+        circle,
+        rgba(0,188,212,0.45),
+        #00bcd4,
+        transparent 70%
+    );
+    filter: blur(18px);
+    z-index: -1;
+}
+
+/* Image itself */
+.hero-photo img {
+    width: 350px;
+    border-radius: 70px;
+    filter: grayscale(100%);
+    transition: 
+        transform 0.4s ease,
+        filter 0.4s ease,
+        box-shadow 0.4s ease;
+    border: 8px solid #044570;
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.45),
+        0 0 40px #00bcd4;
+}
+
+/* Hover WOW */
+.hero-photo:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.06) rotateX(4deg) rotateY(-4deg);
+    box-shadow:
+        0 40px 80px rgba(0,0,0,0.6),
+        0 0 70px rgba(0,188,212,0.5);
+}
+
+
+/* ========================= */
+/* SCROLL DOWN INDICATOR */
+/* ========================= */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5; /* <-- this is the important part */
+    pointer-events: none;
+}
+
+.scroll-indicator span {
+    display: block;
+    width: 24px;
+    height: 50px;
+    border: 2px solid rgba(255,255,255,0.7);
+    border-radius: 14px;
+    position: relative;
+}
+
+.scroll-indicator span::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 4px;
+    height: 6px;
+    background: #00bcd4;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    animation: scrollDot 1.5s infinite;
+}
+
+@keyframes scrollDot {
+    0% { opacity: 0; transform: translate(-50%, 0); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: translate(-50%, 14px); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive hero */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+}
+
+/* ========================= */
+/* HERO MOBILE POLISH */
+/* ========================= */
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column-reverse;
+        padding-top: 120px;
+        height: auto;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-name {
+        font-size: 2.6rem;
+    }
+
+    .typing-line {
+        font-size: 1.4rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin: 15px auto 30px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 260px;
+        justify-content: center;
+    }
+
+    .hero-photo img {
+        width: 240px;
+        margin-bottom: 30px;
+    }
+
+        .hero-photo {
+        transform: none;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}

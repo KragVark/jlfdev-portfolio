@@ -1,0 +1,103 @@
+/* ========================= */
+/* BASE / RESET */
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #003b46;
+}
+
+/* Shared highlight color */
+.highlight {
+    color: #00bcd4;
+}
+
+/* Generic logo links used in multiple sections */
+.logo-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.logo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-card span {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #e0f7fa;
+}
+
+.logo-card:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,150,255,0.6);
+}
+
+.logo-card:hover span {
+    color: #00bcd4;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+    background-color: #044570;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #ffb74d;
+}
+
+/* ========================= */
+/* GLOBAL MOBILE FIXES */
+/* ========================= */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+html, body {
+    overflow-x: hidden;
+}

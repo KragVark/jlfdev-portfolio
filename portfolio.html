@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Janko Ferreira</title>
+
+    <!-- GLOBAL STYLES (ORDER MATTERS) -->
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/animations.css">
+    <link rel="stylesheet" href="CSS/sections.css">
+    <link rel="stylesheet" href="CSS/portfolio.css">
+</head>
+
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTop" aria-label="Back to top">
+    ↑
+</button>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar fade-down">
+    <div class="nav-left">
+        <a href="index.html" class="text-logo">Janko</a>
+    </div>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" class="active-link">Portfolio</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<div id="sideMenu" class="side-menu">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">×</a>
+</div>
+
+<!-- PORTFOLIO HERO -->
+<section class="portfolio-hero has-particles">
+    <canvas id="journeyCanvas"></canvas>
+
+    <div class="portfolio-hero-content reveal-up">
+        <h1>My Journey & Work</h1>
+        <p>
+            From learning foundations to building real-world systems
+            and live websites. This is the story behind the code.
+        </p>
+    </div>
+</section>
+
+<!-- JOURNEY TIMELINE -->
+<section class="portfolio-journey">
+    <h2 class="journey-title reveal-up">The Journey Behind the Code</h2>
+
+    <div class="journey-timeline">
+
+        <!-- 2018-2022 -->
+        <div class="journey-item reveal-left">
+            <div class="journey-card">
+
+                <div class="journey-date">2018-2022</div>
+
+                <div class="journey-text">
+                    <h4>Foundations & Leadership</h4>
+                    <p class="journey-sub">2018-2022</p>
+
+                    <ul>
+                        <li>Built strong leadership, teamwork, and discipline through academics,
+                            sports, and youth leadership roles</li>
+                        <li>Recognised for entrepreneurship
+                            and leadership during high school and church youth camps.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 2020-2022 -->
+        <div class="journey-item reveal-left">
+            <div class="journey-card">
+
+                <div class="journey-date">2020-2022</div>
+
+                <div class="journey-text">
+                    <h4>Entrepreneurship & Technical Exposure</h4>
+                    <p class="journey-sub">2020-2022</p>
+
+                    <ul>
+                        <li>Started and ran a small woodworking business during COVID, progressing
+                            from animal enclosures to furniture and custom builds.</li>
+                        <li>Gained hands-on
+                            experience in problem solving, client work, time-management and self-management.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 2023 -->
+        <div class="journey-item reveal-left">
+            <div class="journey-card">
+
+                <div class="journey-date">2023</div>
+
+                <div class="journey-text">
+                    <h4>Transition into Technology</h4>
+                    <p class="journey-sub">2023</p>
+
+                    <ul>
+                        <li>Worked in team leadership and construction environments while preparing
+                            for formal studies in software development.</li>
+                        <li>Relocated to Pretoria and
+                            assisted with large-scale office setup and technical infrastructure.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 2024-Present -->
+        <div class="journey-item reveal-left">
+            <div class="journey-card">
+
+                <div class="journey-date">2024-Present</div>
+
+                <div class="journey-text">
+                    <h4>Data & Systems Development</h4>
+                    <p class="journey-sub">2024-Present</p>
+
+                    <ul>
+                        <li>Currently working in a Data & Systems role, developing AppSheet web and
+                            mobile applications,</li>
+                        <li>automating workflows with VBA,</li>
+                        <li>and digitising
+                            processes to improve efficiency and reduce operational costs.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 2025 -Present -->
+        <div class="journey-item reveal-left">
+            <div class="journey-card">
+
+                <div class="journey-date">2025-Present</div>
+
+                <div class="journey-text">
+                    <h4>Frontend & Web Development Focus</h4>
+                    <p class="journey-sub">2025-Present</p>
+
+                    <ul>
+                        <li>Actively building and deploying websites for clients while developing a
+                            strong focus on frontend development.</li>
+                        <li>Designed and coded a personal
+                            portfolio website using HTML, CSS, and JavaScript.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- PROJECT SECTION -->
+
+<section class="portfolio-projects">
+    <canvas id="portfolioCanvas"></canvas>
+    <h2 class="projects-title reveal-up">Featured Projects</h2>
+
+    <div class="projects-grid">
+
+        <!-- FireMasters -->
+<article class="project-card reveal-up">
+    <div class="project-logo">
+        <img src="Media/FMW1.jpeg" alt="FireMasters Logo">
+    </div>
+
+    <h2>FireMasters</h2>
+
+    <p class="project-description">
+        FireMasters is a company specializing in the sale and installation of
+        fireplaces, braais, flues, and related heating solutions for residential
+        and commercial clients.
+    </p>
+
+    <p class="project-work">
+        I built the full website using WordPress and Elementor, focusing on
+        clear product presentation, responsiveness, and an easy-to-navigate
+        structure for customers.
+    </p>
+
+    <p class="project-tech">
+        <strong>Tech used:</strong> WordPress, Elementor, HTML, CSS
+    </p>
+
+    <a href="https://firemasters.co.za" target="_blank" class="port-btn secondary">
+        Visit Website →
+    </a>
+</article>
+
+
+        <!-- Safety Management -->
+<article class="project-card reveal-up">
+    <div class="project-logo">
+        <img src="Media/SMW1.png" alt="Safety Management Logo">
+    </div>
+
+    <h2>Safety Management</h2>
+
+    <p class="project-description">
+        Safety Management provides safety inspections, compliance checks,
+        and protocol implementation for development and construction sites
+        to ensure workers and projects meet legal safety requirements.
+    </p>
+
+    <p class="project-work">
+        I designed and built the website to clearly explain services,
+        establish trust, and present a professional presence for clients
+        in the construction industry.
+        I used WordPress and the Elementor HTML Block to hard code the website in HTML and CSS. 
+    </p>
+
+    <p class="project-tech">
+        <strong>Tech used:</strong> WordPress, Elementor, HTML, CSS
+    </p>
+
+    <a href="https://safetymanagement.site" target="_blank" class="port-btn secondary">
+        Visit Website →
+    </a>
+</article>
+
+        <!-- MTC Registration Web App -->
+<article class="project-card reveal-up">
+    <div class="project-logo">
+        <img src="Media/LCGlogo1.png" alt="FireMasters Logo">
+    </div>
+
+    <h2>Living Church of God - South Africa Website</h2>
+
+    <p class="project-description">
+        Living Youth Programs is a Program from Living Church of God designed for the youth to help strenghten and build faith and friendship, 
+        all while having fun in a Godly manner that still let's one light shine!
+    </p>
+
+    <p class="project-work">
+        I built the full website and the Registration web-app, using VS Code. The frontend tech-stack is 
+        HTML, CSS and Javascript, focusing on
+        clear product presentation, responsiveness, and an easy-to-navigate
+        structure for site visitors. The backend tech stack is Python in the FastAPI framework. The database was first SQLite for demo purposes, 
+        then upgraded to PostgreSQL
+    </p>
+
+    <p class="project-tech">
+        <strong>Tech used:</strong> HTML, CSS, Javascript, Python, FastApi, PostgreSQL
+    </p>
+
+    <a href="https://lypsa.onrender.com" target="_blank" class="port-btn secondary">
+        Visit Website →
+    </a>
+</article>
+
+    </div>
+</section>
+
+<footer>
+    <p>Connect with me on:</p>
+        <div class="connect-links">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/27682712616?text=Hi%20I%20found%20your%20portfolio%20website"
+            target="_blank"
+            class="connect-btn whatsapp">
+                WhatsApp
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:Janko.Ferreira@gmail.com?subject=Portfolio%20Enquiry&body=Hi%20I%20found%20your%20portfolio%20website"
+            class="connect-btn email">
+                Email
+            </a>
+        </div>
+</footer>
+
+<!-- JS -->
+<script src="JS/menu.js"></script>
+<script src="JS/reveal.js"></script>
+<script src="JS/particles-journey.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
