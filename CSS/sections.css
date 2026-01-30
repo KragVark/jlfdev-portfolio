@@ -218,7 +218,7 @@
     min-height: 120vh;   /* fills screen if content is short */
     height: auto;        /* grows naturally with content */
     position: relative;
-    background: url('../Media/PortfolioBackground1.png') center/cover no-repeat fixed;
+    background: url('../media/PortfolioBackground1.png') center/cover no-repeat fixed;
     display: flex;
     align-items: center;
     justify-content: center;
